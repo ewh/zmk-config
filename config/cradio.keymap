@@ -44,7 +44,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &lt 1 TAB   &lt 3 ENTER     &lt 3 SPACE  &lt 2 GRAVE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -64,6 +64,15 @@
             HRML(F1, F2, F3, F4) &kp F5 &kp F6 HRML(MINUS, EQUAL, LBKT, RBKT)
             &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans &trans &trans
             &trans &kp K_PP &kp K_PP &trans
+            >;
+        };
+
+        other_layer {
+            bindings = <
+            &trans &trans &trans &trans &trans &trans &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0
+            &trans &trans &trans &trans &trans &trans HRML(KP_N4, KP_N5, KP_N6, DEL)
+            &trans &trans &trans &trans &trans &trans &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSLH
+            &trans &trans &trans &trans
             >;
         };
 
