@@ -5,6 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define HRM_TAPPING_TERM 220
+
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2 &ht LGUI k3 &ht LALT k4
 // #define HRML2(k1,k2,k3,k4) &mt LSHFT k1 &mt LCTRL k2 &mt LGUI k3 &mt LALT k4
@@ -16,8 +18,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <HRM_TAPPING_TERM>;
+            quick-tap-ms = <HRM_TAPPING_TERM>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
