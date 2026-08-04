@@ -69,9 +69,9 @@
 
         other_layer {
             bindings = <
-            &trans &trans &trans &trans &trans &trans &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0
-            &trans &trans &trans &trans &trans &trans HRMR(KP_N4, KP_N5, KP_N6, DEL)
-            &trans &trans &trans &trans &trans &trans &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSLH
+            &trans &trans &trans &trans &trans &trans &kp N7 &kp N8 &kp N9 &kp N0
+            &trans &trans &trans &trans &trans &trans HRMR(N4, N5, N6, DEL)
+            &trans &trans &trans &trans &trans &trans &kp N1 &kp N2 &kp N3 &kp BSLH
             &trans &trans &trans &trans
             >;
         };
