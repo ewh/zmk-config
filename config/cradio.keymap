@@ -14,6 +14,24 @@
 #define HRMR(k1,k2,k3,k4) &ht LALT k1 &ht LGUI k2 &ht LCTRL k3 &ht RSHFT k4
 
 / {
+    soft_off_wakeup_key_node {
+        compatible = "gpio-keys";
+        soft_off_wakeup_key: soft_off_wakeup_key {
+            gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+    };
+
+    soft_off_key_waker: soft_off_key_waker {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_wakeup_key>;
+        wakeup-source;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&soft_off_key_waker>;
+    };
+
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -84,7 +102,7 @@
             bindings = <
             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
             &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans &bt BT_CLR &trans &trans &trans &trans
-            &trans &bootloader &trans &trans &trans &trans &trans &trans &bootloader &trans
+            &trans &bootloader &soft_off &trans &trans &trans &trans &soft_off &bootloader &trans
             &trans &trans &trans &trans
             >;
         };
