@@ -7,6 +7,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define HRM_TAPPING_TERM 150
+#define HRM_QUICK_TAP_TERM 250
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2 &ht LGUI k3 &ht LALT k4
@@ -37,7 +38,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <HRM_TAPPING_TERM>;
-            quick-tap-ms = <HRM_TAPPING_TERM>;
+            quick-tap-ms = <HRM_QUICK_TAP_TERM>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
