@@ -1,0 +1,5 @@
+alias build-full-left='west build -p -d build/right -b nice_nano//zmk -- -DSHIELD=cradio_right -DZMK_CONFIG="/workspaces/zmk-config/config" -DZMK_EXTRA_MODULES="/workspaces/zmk-config"'
+alias build-full-right='west build -p -d build/left -b nice_nano//zmk -- -DSHIELD=cradio_left -DZMK_CONFIG="/workspaces/zmk-config/config" -DZMK_EXTRA_MODULES="/workspaces/zmk-config"'
+alias build-left='west build -d build/left'
+alias build-right='west build -d build/right'
+alias build-both='build-left && build-right'
