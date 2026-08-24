@@ -1,0 +1,5 @@
+FROM localhost/zmk
+
+COPY bashrc /root/.bashrc.d/zmk-custom-bashrc
+
+RUN printf '\nsource /root/.bashrc.d/zmk-custom-bashrc\n' >> /root/.bashrc

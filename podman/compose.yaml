@@ -1,0 +1,16 @@
+services:
+  zmk-ewh:
+    build:
+      context: .
+    image: zmk-ewh
+    working_dir: /workspaces/zmk/app
+    security_opt:
+      - label=disable
+    volumes:
+      - ../../zmk:/workspaces/zmk
+      - ..:/workspaces/zmk-config
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    command: /bin/bash
